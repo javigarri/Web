@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio artístico vanguardista. Galería de arte con cuadros contemporáneos al óleo, acrílicos y técnica mixta. Explora las obras del pintor y exposiciones.">
+    <title>Javigarri • Galería de Arte</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <!-- Botón menú hamburguesa para móviles -->
+        <button class="menu-toggle" aria-label="Abrir menú" id="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Barra de Navegación Lateral (Sidebar) -->
+        <aside class="sidebar" id="app-sidebar">
+            <div class="sidebar-header">
+                <a href="#inicio" class="brand" data-target="inicio">
+                    <h1>Javigarri</h1>
+                </a>
+                <div class="lang-filter-container">
+                    <select class="lang-filter-select" id="lang-selector">
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                        <option value="eu">Euskera</option>
+                        <option value="ca">Català</option>
+                        <option value="gl">Galego</option>
+                        <option value="ar">العربية</option>
+                        <option value="he">עברית</option>
+                        <option value="de">Deutsch</option>
+                        <option value="zh">中文</option>
+                        <option value="ja">日本語</option>
+                    </select>
+                </div>
+            </div>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#inicio" class="active" data-target="inicio" id="nav-inicio" data-i18n="nav.inicio">Inicio</a></li>
+                    <li class="nav-item"><a href="#mi-obra" data-target="mi-obra" id="nav-mi-obra" data-i18n="nav.miObra">Mi Obra</a></li>
+                    <li class="nav-item"><a href="#sobre-mi" data-target="sobre-mi" id="nav-sobre-mi" data-i18n="nav.sobreMi">Sobre Mí</a></li>
+                    <li class="nav-item"><a href="#exposiciones" data-target="exposiciones" id="nav-exposiciones" data-i18n="nav.exposiciones">Exposiciones</a></li>
+                    <li class="nav-item"><a href="#contacto" data-target="contacto" id="nav-contacto" data-i18n="nav.contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="copyright">
+                    © 2026 Javigarri.
+                </div>
+            </div>
+        </aside>
+
+        <!-- Contenedor Principal de Secciones -->
+        <main class="main-content">
+
+            <!-- SECCIÓN: INICIO (COLLAGE DE FONDO Y BIENVENIDA CENTRADA) -->
+            <section id="section-inicio" class="page-section active">
+                <!-- Collage de fondo dinámico -->
+                <div class="collage-bg" id="collage-bg-container"></div>
+                <!-- Capa de oscurecimiento y viñeteado para legibilidad -->
+                <div class="collage-overlay"></div>
+                
+                <div class="inicio-container">
+                    <!-- Panel de Bienvenida (Centrado) -->
+                    <div class="welcome-panel">
+                        <span class="welcome-tag" data-i18n="welcome.tag">Presentación</span>
+                        <h2 class="welcome-title" data-i18n="welcome.title">Bienvenid@s a mi espacio</h2>
+                        <div class="welcome-divider"></div>
+                        <p class="welcome-desc" data-i18n="welcome.desc">El objetivo de esta web es ofrecer un recorrido por mis creaciones. Una colección de caras, algunas conocidas y otras anónimas, pero todas llenas de historias que contar, las cuales he tratado de plasmar en mis cuadros. Espero que os transmitan todas esas emociones y experiencias.</p>
+                        <div class="welcome-footer" data-i18n="welcome.footer">¡Disfrutad del viaje…!</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: MI OBRA -->
+            <section id="section-mi-obra" class="page-section">
+                <div class="section-header">
+                    <span class="section-subtitle" data-i18n="miObra.subtitle">Galería</span>
+                    <h2 class="section-title" data-i18n="miObra.title">Mi Obra</h2>
+                </div>
+
+                <!-- Grid de Cuadros -->
+                <div class="gallery-grid" id="painting-gallery-grid">
+                    <!-- Los elementos se cargan e indexan dinámicamente desde app.js para mantener la sincronización con el Lightbox y el carrusel, pero aquí declaramos la plantilla base o dejamos que app.js lo inyecte -->
+                </div>
+            </section>
+
+            <!-- SECCIÓN: SOBRE MÍ -->
+            <section id="section-sobre-mi" class="page-section">
+                <div class="section-header">
+                    <span class="section-subtitle" data-i18n="sobreMi.subtitle">Trayectoria</span>
+                    <h2 class="section-title" data-i18n="sobreMi.title">Sobre Mí</h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text">
+                        <blockquote class="about-quote">
+                            <span data-i18n="sobreMi.quote">«If you could say it in words, there would be no reason to paint it.»</span>
+                            <cite data-i18n="sobreMi.quoteAuthor">Edward Hopper</cite>
+                        </blockquote>
+                        <p class="lead" data-i18n="sobreMi.p1">Mi nombre es Javi. Nací en Vitoria-Gasteiz en 1963, aunque pasé mi infancia en Apellániz, donde vivía toda mi familia.</p>
+                        <p data-i18n="sobreMi.p2">Una vez finalizados mis estudios, me trasladé a Valencia donde residí tres años. Durante aquella estancia se despertó en mí el interés por el arte, ya que conocí de cerca el trabajo de Paco Sena, pintor amateur cuya obra estaba inspirada en Sorolla.</p>
+                        <p data-i18n="sobreMi.p3">Al regresar a Vitoria, trabajé durante veinte años en la industria aeronáutica. En 2010 me desplacé a Monaghan (Irlanda), donde viví un año. Allí cooperé en «Solas Drop-in Centre», un centro de acogida a personas en riesgo de exclusión social. Fue en esa etapa cuando empezó mi andadura en el mundo de la pintura. En aquel nuevo entorno, los sentimientos y las emociones que me rodeaban fueron la inspiración para mis primeros bocetos.</p>
+                        <p data-i18n="sobreMi.p4">Después de un tiempo alejado del arte, me reencontré con aquello que me sirvió hace unos años para evadirme, la pintura. Esta web es un reflejo de todo aquello que he ido aprendiendo y creando.</p>
+                        <div class="about-signature" data-i18n="sobreMi.signature">Espero que os guste…</div>
+                    </div>
+                    <div class="about-image">
+                        <div class="about-img-frame">
+                            <img src="Javi.jpg" alt="Retrato del pintor en su taller de arte">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: EXPOSICIONES -->
+            <section id="section-exposiciones" class="page-section">
+                <div class="section-header">
+                    <span class="section-subtitle" data-i18n="exposiciones.subtitle">Agenda</span>
+                    <h2 class="section-title" data-i18n="exposiciones.title">Exposiciones</h2>
+                </div>
+
+                <div class="exhibitions-timeline" id="exhibitions-timeline-container">
+                    <!-- Los carteles de las exposiciones se cargarán dinámicamente agrupados por años desde app.js -->
+                </div>
+            </section>
+
+            <!-- SECCIÓN: CONTACTO -->
+            <section id="section-contacto" class="page-section">
+                <div class="section-header">
+                    <span class="section-subtitle" data-i18n="contacto.subtitle">Conversaciones</span>
+                    <h2 class="section-title" data-i18n="contacto.title">Contacto</h2>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-details">
+                            <div class="contact-detail-item">
+                                <span class="contact-detail-label" data-i18n="contacto.labelAddress">Taller / Dirección</span>
+                                <span class="contact-detail-value">Vitoria-Gasteiz 01006</span>
+                            </div>
+                            <div class="contact-detail-item">
+                                <span class="contact-detail-label" data-i18n="contacto.labelEmail">Email</span>
+                                <span class="contact-detail-value"><a href="mailto:javigarri01@gmail.com">javigarri01@gmail.com</a></span>
+                            </div>
+                            <div class="contact-detail-item">
+                                <span class="contact-detail-label" data-i18n="contacto.labelPhone">Teléfono</span>
+                                <span class="contact-detail-value"><a href="tel:+34630773584">34 630773584</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <form id="artist-contact-form" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="form-name" class="form-input" placeholder=" " required>
+                                <label for="form-name" class="form-label" data-i18n="contacto.formName">Nombre Completo</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="form-email" class="form-input" placeholder=" " required>
+                                <label for="form-email" class="form-label" data-i18n="contacto.formEmail">Correo Electrónico</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="form-subject" class="form-input" placeholder=" ">
+                                <label for="form-subject" class="form-label" data-i18n="contacto.formSubject">Asunto (Ej: Interés en obra o visita)</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="form-message" class="form-input" placeholder=" " required></textarea>
+                                <label for="form-message" class="form-label" data-i18n="contacto.formMessage">Mensaje</label>
+                            </div>
+                            <button type="submit" class="submit-btn" id="form-submit-btn" data-i18n="contacto.formBtn">Enviar Mensaje</button>
+                            <div class="form-status" id="form-status-msg"></div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- LIGHTBOX / MODAL DE DETALLE DE OBRA -->
+    <div class="lightbox-modal" id="art-lightbox">
+        <button class="lightbox-close" id="close-lightbox" aria-label="Cerrar ventana">&times;</button>
+        <div class="lightbox-content">
+            
+            <div class="lightbox-image-panel">
+                <img src="" alt="Vista de obra" id="lightbox-img">
+            </div>
+            
+            <div class="lightbox-info-panel">
+                <div class="lightbox-meta-top">
+                    <span class="lightbox-cat" id="lightbox-cat">Categoría</span>
+                    <h3 class="lightbox-title" id="lightbox-title">Título de la Obra</h3>
+                    
+                    <div class="lightbox-spec-list">
+                        <div class="lightbox-spec-item">
+                            <span class="lightbox-spec-label" data-i18n="lightbox.year">Año</span>
+                            <span class="lightbox-spec-val" id="lightbox-year">2024</span>
+                        </div>
+                        <div class="lightbox-spec-item">
+                            <span class="lightbox-spec-label" data-i18n="lightbox.tech">Técnica</span>
+                            <span class="lightbox-spec-val" id="lightbox-tech">Óleo sobre lienzo</span>
+                        </div>
+                        <div class="lightbox-spec-item">
+                            <span class="lightbox-spec-label" data-i18n="lightbox.size">Dimensiones</span>
+                            <span class="lightbox-spec-val" id="lightbox-size">100 x 100 cm</span>
+                        </div>
+                        <div class="lightbox-spec-item">
+                            <span class="lightbox-spec-label" data-i18n="lightbox.status">Estado</span>
+                            <span class="lightbox-spec-val" id="lightbox-status">Disponible</span>
+                        </div>
+                    </div>
+                    
+                    <p class="lightbox-description" id="lightbox-desc">Descripción detallada de la obra de arte.</p>
+                </div>
+
+                <div class="lightbox-actions">
+                    <button class="lightbox-inquire-btn" id="inquire-painting-btn" data-i18n="lightbox.btnInquire">Consultar disponibilidad</button>
+                    
+                    <div class="lightbox-nav">
+                        <button class="lightbox-nav-btn" id="prev-lightbox-btn" data-i18n="lightbox.btnPrev">← Anterior</button>
+                        <button class="lightbox-nav-btn" id="next-lightbox-btn" data-i18n="lightbox.btnNext">Siguiente →</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="descripciones.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
